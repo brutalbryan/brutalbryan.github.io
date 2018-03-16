@@ -1,0 +1,52 @@
+.accordion-element {
+    width: 100%;
+    color: $colorBlack;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 0;
+
+
+    .accordion-title {
+        background-color: $lightGrey;
+        padding: 15px;
+        cursor: pointer;
+        font-weight: 500;
+
+        .open-accordion {
+            position: absolute;
+            top: 28%;
+            right: 2%;
+            font-weight: 700;
+            transform: rotate(0deg);
+            transition: .25s ease;
+            font-size: 1.3em;
+        }
+
+        &.active {
+            .open-accordion {
+                transform: rotate(45deg);
+            }
+        }
+
+        &:hover {
+            background-color: $lightGrey;
+        }
+    }
+
+    .accordion-content {
+        background-color: #F2F2F2;
+        overflow: hidden;
+        height: 0;
+        transition: all .25s ease;
+
+        a {
+            img {
+                display: table;
+            }
+        }
+
+        > div {
+            padding: 15px;
+            font-weight: 400;
+        }
+    }
+}

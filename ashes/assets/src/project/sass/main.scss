@@ -1,0 +1,34 @@
+//Variables
+@import "settings/variables";
+
+//Mixins
+@import "tools/nav-mixins";
+
+// Sitefinity CSS
+@import "../../sitefinity/sass/sitefinity";
+
+//Import Bootstrap 4 grid from npm
+@import "bootstrap_grid/bootstrap-grid.scss";
+
+//Import .scss files here
+@import "global/general";
+@import "global/fonts";
+@import "global/homepage.scss";
+@import "widgets/navigation/treeview";
+@import "widgets/header/menu-nav";
+@import "widgets/header/lang-selector";
+@import "widgets/vimeo/vimeo";
+@import "widgets/banner/banner";
+@import "widgets/sigleline/singleline";
+@import "widgets/accordion/accordion";
+@import "widgets/tabstrip/tabstrip";
+@import "widgets/paramchart/paramchart";
+@import "widgets/buttonlink/buttonlink";
+@import "widgets/footer/footer";
+@import "widgets/youtube/youtube";
+@import "widgets/documentTable/documentTable";
+@import "widgets/contributedArticles/contributedArticles";
+@import "widgets/image/lightcase";
+@import "widgets/pressRelease/pressRelease";
+@import "widgets/image/lightcase";
+@import "widgets/packaging/packaging";

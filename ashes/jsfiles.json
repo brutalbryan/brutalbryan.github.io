@@ -1,0 +1,18 @@
+{
+  "concatJsFiles": [
+    "assets/src/project/js/main.js",
+    "assets/src/project/js/widgets/navigation/treeview.js",
+    "assets/src/project/js/widgets/header/lang-selector.js",
+    "assets/src/project/js/widgets/header/menu-nav.js",
+    "assets/src/project/js/widgets/vimeo/vimeo.js",
+    "assets/src/project/js/widgets/banner/banner.js",
+    "assets/src/project/js/widgets/accordion/accordion.js",
+    "assets/src/project/js/widgets/paramchart/paramchart.js",
+    "assets/src/project/js/widgets/tabstrip/tabstrip.js",
+    "assets/src/project/js/widgets/image/image.js",
+    "assets/src/project/js/widgets/image/lightcase.js",
+    "assets/src/project/js/widgets/buttonlink/buttonlink.js",
+    "assets/src/project/js/homepage.js",
+    "assets/src/project/js/SoftAndHardGateHandler.js"
+  ]
+}

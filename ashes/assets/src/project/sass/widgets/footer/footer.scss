@@ -1,0 +1,162 @@
+﻿footer {
+    background: $colorDarkGrey;
+    font-size: 12px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+
+    .clear {
+        clear: both;
+    }
+
+    a {
+        color: $colorWhite;
+
+        &:link {
+            color: $colorWhite;
+        }
+    }
+
+    p {
+        text-align: right;
+        color: $colorWhite;
+        margin-bottom: 12px;
+    }
+
+    nav {
+        float: right;
+        margin-bottom: 7px;
+        margin-top: 10px;
+
+        a {
+            float: left;
+            list-style: none;
+            font-size: 12px;
+            text-decoration: none;
+            color: $colorWhite;
+
+            &:link {
+                text-decoration: none;
+                color: $colorWhite;
+            }
+
+            &:visited {
+                text-decoration: none;
+                color: $colorWhite;
+            }
+
+            &:hover {
+                color: #d4d4d5;
+            }
+
+            &:after {
+                content: ' |';
+                color: #fff;
+            }
+
+            &:before {
+                content: '\00a0';
+                color: #fff;
+            }
+
+            &:last-child:after {
+                content: '';
+            }
+        }
+    }
+
+    .social-icons {
+        font-family: 'social-icons' !important;
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        font-size: 45px;
+        float: left;
+        line-height: 1em;
+        color: #d4d4d5;
+
+        div {
+            float: left;
+            margin-right: 14px;
+            margin-top: 11px;
+            cursor: pointer;
+            -webkit-transition: color ease-in-out .3s;
+            transition: color ease-in-out .3s;
+
+            &:hover {
+                background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0, #fff), color-stop(51%, #fff), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+                background: -webkit-radial-gradient(center, ellipse cover, #fff 0, #fff 51%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+                background: -webkit-radial-gradient(center, ellipse, #fff 0, #fff 51%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+                background: radial-gradient(ellipse at center, #fff 0, #fff 51%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+                /* filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1); */
+                border-radius: 100%;
+            }
+        }
+    }
+
+
+
+    .facebook {
+        &:before {
+            content: '\e800';
+        }
+
+        &:hover {
+            color: #3b5998;
+        }
+    }
+
+    .linkedin {
+        &:before {
+            content: '\e801';
+        }
+
+        &:hover {
+            color: #007bb6;
+        }
+    }
+
+    .twitter {
+        &:before {
+            content: '\e803';
+        }
+
+        &:hover {
+            color: #00aced;
+        }
+    }
+
+    .youtube {
+        &:before {
+            content: '\e804';
+        }
+
+        &:hover {
+            color: #b00;
+        }
+    }
+
+    .google {
+        &:before {
+            content: '\e805';
+        }
+
+        &:hover {
+            color: #da4835;
+        }
+    }
+
+    .rss {
+        &:before {
+            content: '\e802'
+        }
+
+        &:hover {
+            color: #f60;
+        }
+    }
+}

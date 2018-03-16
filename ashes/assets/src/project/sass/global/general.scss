@@ -1,0 +1,242 @@
+/*add css here if you don't feel like organizing css....*/
+
+/*hack so that wysiwyg in sitefinity works with bootstrap4 grid*/
+.RadDockZone {
+    box-sizing: border-box !important;
+}
+
+/***** Mixins ******/
+@mixin htags() {
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    overflow-x:hidden;
+}
+
+.sfPageEditor {
+    #tab {
+        .tab-configurator {
+            height:24px !important;
+        }
+    }
+}
+
+.page-content {
+    img {
+        max-width: 100%;
+        display: block;
+        margin: 10px auto;
+
+
+        &.no-resize {
+            width: auto !important;
+        }
+
+        &.top-center {
+            margin-top: 50%;
+            transform: translateY(-100%);
+            margin-bottom: -50%;
+        }
+    }
+
+    table:not(.rdTable) {
+        border-spacing: 0;
+
+        tr {
+            th {
+                padding-top: 15px;
+                padding-bottom: 10px;
+                text-align: left;
+                border-bottom: 1px solid $lightGrey;
+            }
+
+            td {
+                padding: 12px 15px;
+                text-align: left;
+                border-bottom: 1px solid $lightGrey;
+
+                img {
+                    width: auto !important;
+                }
+            }
+        }
+    }
+
+    ul:not(.rdCommands):not(.nav-tabs):not(.parametric__title-options):not(.parametric__columns-list):not(.leftnav-list):not(.whiteList-ul):not(.tree-menu):not(.subtree-menu) {
+        list-style: none;
+        padding: 0 0 0 26px;
+
+        li {
+            text-indent: -1px;
+            padding-left: 0;
+            padding-bottom: 10px;
+            list-style: none;
+
+            &:before {
+                content: '';
+                position: absolute;
+                height: 6px;
+                width: 6px;
+                background: #ee2a24;
+                border-radius: 100%;
+                margin: 9px 0 0 -11px;
+            }
+        }
+    }
+}
+
+.press {
+    background: #6d6e70;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
+    color: $colorWhite;
+    /*height: 27px;*/
+    margin-right:0;
+    margin-left:0;
+    overflow: hidden;
+    margin-bottom: -20px;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 10px;
+    margin-top: 20px;
+
+    a {
+        &.press-open {
+            padding: 7px 0 28px 10px;
+            background: #ee2a24;
+            color: #fff;
+            position: relative;
+            min-width: 135px;
+            height: 27px;
+            display: inline-block;
+            text-decoration: none;
+        }
+    }
+
+    h2 {
+        font-size: 30px;
+        margin-top: 13px;
+        text-transform: capitalize;
+        border-bottom: dotted 1px;
+        color: $colorWhite;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            a {
+                text-align: center;
+                position: relative;
+                min-width: 135px;
+                height: 27px;
+                display: inline-block;
+                background: #ee2a24;
+                padding: 5px 5px 27px 5px;
+                margin: .3em 0;
+                text-decoration: none;
+                color: $colorWhite;
+            }
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $colorRed;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    @include htags();
+    color: $colorRed;
+    font-size: 32px;
+}
+
+h2 {
+    @include htags();
+    color: $colorRed;
+    font-size: 24px;
+}
+
+h3 {
+    @include htags();
+    font-size: 24px;
+}
+
+h4 {
+    @include htags();
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.separator {
+    height: 15px;
+    margin: 3px 0 4px 0;
+
+    &:before {
+        content: '';
+        width: 31%;
+        background: $colorRed;
+        border-top: 15px solid transparent;
+        border-right: 10px solid $colorWhite;
+        position: absolute;
+    }
+
+    &:after {
+        content: '';
+        width: 69.2%;
+        background: transparent;
+        border-left: 10px solid transparent;
+        border-bottom: 15px solid #a6a8ab;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.box-border {
+    padding: 10px;
+    border: 1px solid $lightGrey;
+    border-radius: 5px;
+    height: 100%;
+}
+div:not(.box-border):not(:nth-child(2n+1)) .row {
+    margin-bottom: 25px;
+}
+
+.has-leftnav {
+    > .sf_cols {
+        > .row {
+            > .col-md-10 {
+                border-left: 1px solid $lightGrey;
+            }
+        }
+    }
+
+    > .row {
+        > .col-md-10 {
+            border-left: 1px solid $lightGrey;
+        }
+    }
+}
+
+hr {
+    margin-top:0;
+    margin-bottom:0;
+    border-width:0;
+    border-top:1px solid $lightGrey;
+}
+
