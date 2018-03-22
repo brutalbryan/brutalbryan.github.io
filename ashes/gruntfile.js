@@ -110,7 +110,7 @@ module.exports = function (grunt) {
 
 		// Concat & minify
 		// This processes the files described in 'jsfiles.json'
-        uglify: {  
+        uglify: {
             project: {
                 options: {
                     report: 'gzip',
