@@ -1618,19 +1618,9 @@ html {
   font-style: normal; }
 
 body {
+  background: black;
   font-family: Verdana, sans-serif;
   margin: 0px; }
-  body #main-content .row {
-    height: 400px; }
-  body #main-content div {
-    background: black;
-    z-index: 1111; }
-    body #main-content div:not(:nth-child(2n+0)) div {
-      background: #383739; }
-  body footer {
-    border: 1px solid grey;
-    margin: 5px;
-    padding: 8px; }
   body header nav {
     position: relative;
     z-index: 1111;
@@ -1648,7 +1638,6 @@ body {
         padding-top: 5px;
         padding-left: 20px; }
   body #main-banner {
-    background: black;
     padding: 0px;
     top: 0px;
     width: 100vw;
@@ -1741,64 +1730,43 @@ body {
           position: absolute;
           left: 50%;
           transform: translateY(-100px) translateX(40px); }
-  body .banner {
+  body #main-content .divider {
+    z-index: 1111;
+    margin-left: 21px;
+    top: 35px;
+    height: 96px;
     position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden; }
-  body .image-container {
-    display: block;
-    position: absolute;
-    width: 120%;
-    height: 100%;
-    transform: skew(-20deg);
-    overflow: hidden; }
-    body .image-container.image-1 {
-      display: block;
-      right: 50%;
-      z-index: 1; }
-      body .image-container.image-1 .image {
-        background-image: url(./../../../../ashes/assets/src/project/images/banner_overlay.png);
-        transform: skew(20deg) translateY(-300px) translateX(200px); }
-    body .image-container.image-2 {
-      left: 50%;
-      z-index: 2; }
-      body .image-container.image-2 .image {
-        background-image: url(./../../../../ashes/assets/src/project/images/banner_overlay.png);
-        margin-left: -100px;
-        transform: skew(20deg) translateY(300px) translateX(-200px); }
-  body .image {
-    display: block;
-    width: 130%;
-    height: 100%;
-    background: transparent no-repeat center center;
-    background-size: cover;
-    transform: skew(20deg);
-    transition: all .3s ease-out;
-    opacity: 0; }
-    body .image.active {
-      transform: skew(20deg) !important;
-      opacity: 1; }
-  body p {
-    text-align: center;
-    font-size: 22px;
-    line-height: 30px;
-    max-width: 80%;
-    margin: 60px auto; }
-
-@keyframes expand {
-  0% {
-    opacity: 0;
-    transform: scale(0.5); }
-  10% {
-    opacity: 1; }
-  100% {
-    opacity: 0;
-    transform: scale(1); } }
-  body .logo {
-    position: absolute;
-    left: 42%;
-    z-index: 0; }
-    body .logo:after {
-      z-index: 3;
-      transition: all .3s ease-out, opacity .2s .5s ease-out; }
+    background-image: url(./../../../../ashes/assets/dist/images/divider.png);
+    background-position: center -2px;
+    width: calc(100% - 18px - 69px); }
+    body #main-content .divider:before {
+      content: "";
+      top: 0;
+      height: 100%;
+      position: absolute;
+      background-image: url(./../../../../ashes/assets/dist/images/divider.png);
+      left: -20px;
+      width: 60px;
+      background-position: left -106px; }
+    body #main-content .divider:after {
+      content: "";
+      top: 0;
+      height: 100%;
+      position: absolute;
+      background-image: url(./../../../../ashes/assets/dist/images/divider.png);
+      right: -75px;
+      width: 120px;
+      background-position: right -106px; }
+  body #main-content .row {
+    position: relative;
+    background: #e9d4ab;
+    height: 400px; }
+  body #main-content div {
+    z-index: 1111; }
+    body #main-content div:not(:nth-child(2n+0)) div {
+      background: #383739; }
+  body footer {
+    color: white;
+    border: 1px solid grey;
+    margin: 5px;
+    padding: 8px; }
