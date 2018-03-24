@@ -1633,11 +1633,21 @@ header nav {
     top: 0;
     width: 100%;
     background: black;
-    min-height: 65px; }
-    header nav .sticky a img {
+    min-height: 65px;
+    border-bottom: 1px solid #E6EAED; }
+    header nav .sticky a:first-child img {
       width: 230px;
       padding-top: 5px;
       padding-left: 20px; }
+    header nav .sticky a:not(:first-child) {
+      font-size: 20px;
+      text-decoration: none;
+      color: #E6EAED;
+      border-right: 1px solid #E6EAED;
+      padding-right: 5vw;
+      padding-left: 5vw; }
+      header nav .sticky a:not(:first-child) img {
+        width: 3vw; }
 
 #main-banner {
   padding: 0px;

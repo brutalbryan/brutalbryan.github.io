@@ -3,6 +3,10 @@
 $image1:url(./../../../../ashes/assets/src/project/images/banner_overlay.png);
 $image2:url(./../../../../ashes/assets/src/project/images/banner_overlay.png);
 $divider:url(./../../../../ashes/assets/dist/images/divider.png);
+
+
+
+
 body {
     background: black;
     font-family: Verdana, sans-serif;
@@ -23,26 +27,38 @@ header{
           width: 100%;
           background: darken($midnightBlack,50%);
           min-height: 65px;
-
+          border-bottom: 1px solid $arcticGrey;
 
           a{
-
-            img{
-              width: 230px;
-              padding-top: 5px;
-              padding-left: 20px;
+            &:first-child{
+              img{
+                width: 230px;
+                padding-top: 5px;
+                padding-left: 20px;
+              }
             }
+            &:not(:first-child){
+              font-size: 20px;
+              text-decoration: none;
+              color: $arcticGrey;
+              border-right: 1px solid $arcticGrey;
+              padding-right: 5vw;
+              padding-left: 5vw;
+              img{
+                width:3vw;
+              }
+
+            }
+
           }
         }
       }
     }
 
 #main-banner{
-
       padding: 0px;
       top: 0px;
       width: 100vw;
-
 
       #main-video-container{
 
@@ -165,7 +181,6 @@ header{
         }
       }
     }
-
 
 #main-content{
 
