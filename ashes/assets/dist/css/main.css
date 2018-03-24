@@ -1621,134 +1621,142 @@ body {
   background: black;
   font-family: Verdana, sans-serif;
   margin: 0px; }
-  body header nav {
-    position: relative;
-    z-index: 1111;
-    min-width: 1000px;
+
+header nav {
+  position: relative;
+  z-index: 1111;
+  min-width: 1000px;
+  width: 100vw;
+  opacity: .6; }
+  header nav .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    min-height: 65px; }
+    header nav .sticky a img {
+      width: 230px;
+      padding-top: 5px;
+      padding-left: 20px; }
+
+#main-banner {
+  padding: 0px;
+  top: 0px;
+  width: 100vw; }
+  #main-banner #main-video-container video {
     width: 100vw;
-    opacity: .6; }
-    body header nav .sticky {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: black;
-      min-height: 65px; }
-      body header nav .sticky a img {
-        width: 230px;
-        padding-top: 5px;
-        padding-left: 20px; }
-  body #main-banner {
-    padding: 0px;
-    top: 0px;
-    width: 100vw;
-    min-height: 650px; }
-    body #main-banner #main-video-container {
-      height: 40vh; }
-      body #main-banner #main-video-container video {
-        opacity: 0.75; }
-    body #main-banner #main-video-overlay {
+    opacity: 0.75; }
+  #main-banner #main-video-overlay {
+    position: absolute;
+    top: calc(22vw);
+    left: calc(100vw - 75vw); }
+    #main-banner #main-video-overlay img {
+      width: 53vw; }
+    #main-banner #main-video-overlay .btn {
+      display: block;
       position: absolute;
-      top: 30%;
-      left: 30%; }
-      body #main-banner #main-video-overlay .btn {
+      top: 50%;
+      left: 50%;
+      width: 190px;
+      height: 60px;
+      line-height: 60px;
+      margin-top: 100px;
+      padding: 0;
+      text-align: center;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: white;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      z-index: 1000;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      overflow: hidden; }
+      #main-banner #main-video-overlay .btn:after {
         display: block;
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 190px;
-        height: 60px;
-        line-height: 60px;
-        margin-top: 100px;
-        padding: 0;
-        text-align: center;
-        font-size: 20px;
-        text-transform: uppercase;
-        color: #5e5e60;
         transform: translate(-50%, -50%);
+        content: "";
+        background: white;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
         opacity: 0;
-        z-index: 1000;
-        box-shadow: none !important;
-        border-radius: 0 !important;
-        overflow: hidden; }
-        body #main-banner #main-video-overlay .btn:after {
-          display: block;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          content: "";
-          background: #5e5e60;
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          opacity: 0;
-          z-index: -1;
-          transition: all .4s ease-out; }
-        body #main-banner #main-video-overlay .btn.active {
-          opacity: 1;
-          transition: all .3s ease-out, opacity .2s .5s ease-out; }
-          body #main-banner #main-video-overlay .btn.active:hover {
-            color: white; }
-            body #main-banner #main-video-overlay .btn.active:hover:after {
-              opacity: .45;
-              width: 105%;
-              height: 500%; }
-          body #main-banner #main-video-overlay .btn.active .side {
-            opacity: 1; }
-          body #main-banner #main-video-overlay .btn.active .top, body #main-banner #main-video-overlay .btn.active .bottom {
-            width: 100% !important; }
-          body #main-banner #main-video-overlay .btn.active .left, body #main-banner #main-video-overlay .btn.active .right {
-            height: 100% !important; }
-        body #main-banner #main-video-overlay .btn .side {
-          display: block;
-          position: absolute;
-          background: #5e5e60;
-          content: "";
-          transition: all .3s .5s ease-out;
-          opacity: 0; }
-          body #main-banner #main-video-overlay .btn .side.top {
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 2px; }
-          body #main-banner #main-video-overlay .btn .side.bottom {
-            bottom: 0;
-            right: 0;
-            width: 0%;
-            height: 2px; }
-          body #main-banner #main-video-overlay .btn .side.left {
-            bottom: 0;
-            left: 0;
-            width: 2px;
-            height: 0%; }
-          body #main-banner #main-video-overlay .btn .side.right {
-            top: 0;
-            right: 0;
-            width: 2px;
-            height: 0%; }
-        body #main-banner #main-video-overlay .btn .banner {
-          position: absolute;
-          left: 50%;
-          transform: translateY(-100px) translateX(40px); }
-  body #main-content .divider {
+        z-index: -1;
+        transition: all .4s ease-out; }
+      #main-banner #main-video-overlay .btn.active {
+        opacity: .75;
+        transition: all .3s ease-out, opacity .2s .5s ease-out; }
+        #main-banner #main-video-overlay .btn.active:hover {
+          color: white; }
+          #main-banner #main-video-overlay .btn.active:hover:after {
+            opacity: .45;
+            width: 105%;
+            height: 500%; }
+        #main-banner #main-video-overlay .btn.active .side {
+          opacity: .60; }
+        #main-banner #main-video-overlay .btn.active .top, #main-banner #main-video-overlay .btn.active .bottom {
+          width: 100% !important; }
+        #main-banner #main-video-overlay .btn.active .left, #main-banner #main-video-overlay .btn.active .right {
+          height: 100% !important; }
+      #main-banner #main-video-overlay .btn .side {
+        display: block;
+        position: absolute;
+        background: white;
+        content: "";
+        transition: all .3s .5s ease-out;
+        opacity: 0; }
+        #main-banner #main-video-overlay .btn .side.top {
+          top: 0;
+          left: 0;
+          width: 0%;
+          height: 2px; }
+        #main-banner #main-video-overlay .btn .side.bottom {
+          bottom: 0;
+          right: 0;
+          width: 0%;
+          height: 2px; }
+        #main-banner #main-video-overlay .btn .side.left {
+          bottom: 0;
+          left: 0;
+          width: 2px;
+          height: 0%; }
+        #main-banner #main-video-overlay .btn .side.right {
+          top: 0;
+          right: 0;
+          width: 2px;
+          height: 0%; }
+      #main-banner #main-video-overlay .btn .banner {
+        position: absolute;
+        left: 50%;
+        transform: translateY(-100px) translateX(40px); }
+
+#main-content .row {
+  top: -1px;
+  position: relative;
+  background: #e9d4ab;
+  height: 400px; }
+  #main-content .row .divider {
     z-index: 1111;
     margin-left: 21px;
-    top: 35px;
     height: 96px;
+    top: -19px;
     position: relative;
     background-image: url(./../../../../ashes/assets/dist/images/divider.png);
     background-position: center -2px;
     width: calc(100% - 18px - 69px); }
-    body #main-content .divider:before {
+    #main-content .row .divider:before {
       content: "";
       top: 0;
       height: 100%;
       position: absolute;
       background-image: url(./../../../../ashes/assets/dist/images/divider.png);
-      left: -20px;
+      left: -21px;
       width: 60px;
       background-position: left -106px; }
-    body #main-content .divider:after {
+    #main-content .row .divider:after {
       content: "";
       top: 0;
       height: 100%;
@@ -1757,16 +1765,18 @@ body {
       right: -75px;
       width: 120px;
       background-position: right -106px; }
-  body #main-content .row {
-    position: relative;
-    background: #e9d4ab;
-    height: 400px; }
-  body #main-content div {
-    z-index: 1111; }
-    body #main-content div:not(:nth-child(2n+0)) div {
-      background: #383739; }
-  body footer {
-    color: white;
-    border: 1px solid grey;
-    margin: 5px;
-    padding: 8px; }
+    #main-content .row .divider.bot {
+      transform: rotate(180deg);
+      top: 78%;
+      position: absolute;
+      width: 100%;
+      margin-left: 0px; }
+
+#main-content .row:nth-child(2n+0) {
+  background: #383739; }
+
+footer {
+  color: white;
+  border: 1px solid grey;
+  margin: 5px;
+  padding: 8px; }
