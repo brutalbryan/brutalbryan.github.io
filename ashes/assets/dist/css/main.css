@@ -1636,7 +1636,7 @@ header nav {
     min-height: 65px;
     border-bottom: 1px solid #E6EAED; }
     header nav .sticky a:first-child img {
-      width: 230px;
+      width: 25vw;
       padding-top: 5px;
       padding-left: 20px; }
     header nav .sticky a:not(:first-child) {
@@ -1744,6 +1744,7 @@ header nav {
         transform: translateY(-100px) translateX(40px); }
 
 #main-content .row {
+  margin: 0;
   top: -1px;
   position: relative;
   background: #e9d4ab;
@@ -1752,11 +1753,11 @@ header nav {
     z-index: 1111;
     margin-left: 21px;
     height: 96px;
-    top: -19px;
+    top: -36px;
     position: relative;
     background-image: url(./../../../../ashes/assets/dist/images/divider.png);
     background-position: center -2px;
-    width: calc(100% - 18px - 69px); }
+    width: calc(100% - 21px - 75px); }
     #main-content .row .divider:before {
       content: "";
       top: 0;
@@ -1768,18 +1769,17 @@ header nav {
       background-position: left -106px; }
     #main-content .row .divider:after {
       content: "";
-      top: 0;
       height: 100%;
       position: absolute;
       background-image: url(./../../../../ashes/assets/dist/images/divider.png);
       right: -75px;
-      width: 120px;
+      width: 113px;
       background-position: right -106px; }
     #main-content .row .divider.bot {
       transform: rotate(180deg);
       top: 78%;
       position: absolute;
-      width: 100%;
+      width: calc(100% - 21px);
       margin-left: 0px; }
 
 #main-content .row:nth-child(2n+0) {

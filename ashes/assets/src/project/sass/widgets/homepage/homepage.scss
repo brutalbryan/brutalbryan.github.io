@@ -32,7 +32,7 @@ header{
           a{
             &:first-child{
               img{
-                width: 230px;
+                width: 25vw;
                 padding-top: 5px;
                 padding-left: 20px;
               }
@@ -186,6 +186,7 @@ header{
 
 
       .row{
+          margin: 0;
           top:-1px;
           position: relative;
           background: #e9d4ab;
@@ -194,11 +195,11 @@ header{
             z-index: 1111;
             margin-left: 21px;
             height: 96px;
-            top: -19px;
+            top: -36px;
             position: relative;
             background-image: $divider;
             background-position: center -2px;
-            width: calc(100% - 18px - 69px);
+            width: calc(100% - 21px - 75px);
 
             &:before{
               content: "";
@@ -213,12 +214,11 @@ header{
 
             &:after{
               content: "";
-              top: 0;
               height: 100%;
               position: absolute;
               background-image: $divider;
               right: -75px;
-              width: 120px;
+              width: 113px;
               background-position: right -106px;
             }
 
@@ -226,7 +226,7 @@ header{
               transform: rotate(180deg);
               top: 78%;
               position: absolute;
-              width: 100%;
+              width: calc(100% - 21px);
               margin-left: 0px;
             }
           }
