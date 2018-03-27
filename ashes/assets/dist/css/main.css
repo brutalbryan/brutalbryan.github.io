@@ -1630,24 +1630,46 @@ header nav {
   opacity: .6; }
   header nav .sticky {
     position: fixed;
-    top: 0;
     width: 100%;
     background: black;
     min-height: 65px;
     border-bottom: 1px solid #E6EAED; }
-    header nav .sticky a:first-child img {
-      width: 25vw;
-      padding-top: 5px;
-      padding-left: 20px; }
-    header nav .sticky a:not(:first-child) {
-      font-size: 20px;
-      text-decoration: none;
-      color: #E6EAED;
+    header nav .sticky > a:first-child img {
+      width: 15vw;
+      min-width: 150px;
+      max-width: 200px;
+      padding-top: 10px;
+      padding-left: 10px; }
+    header nav .sticky div {
+      display: inline-table;
+      float: right;
+      width: 10px;
       border-right: 1px solid #E6EAED;
-      padding-right: 5vw;
-      padding-left: 5vw; }
-      header nav .sticky a:not(:first-child) img {
-        width: 3vw; }
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-right: 4vw;
+      padding-left: 5vw;
+      height: 100%; }
+      header nav .sticky div:hover a img {
+        transform: translate(0px, -20px); }
+      header nav .sticky div:hover a span {
+        transform: translate(0px, -20px);
+        opacity: .80; }
+      header nav .sticky div a {
+        font-size: 16px;
+        text-decoration: none;
+        color: #E6EAED; }
+        header nav .sticky div a img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 4vw;
+          padding-top: 20px;
+          transition: all .5s ease-out; }
+        header nav .sticky div a span {
+          position: absolute;
+          transition: all .5s ease-out;
+          opacity: 0; }
 
 #main-banner {
   padding: 0px;
@@ -1743,22 +1765,21 @@ header nav {
         left: 50%;
         transform: translateY(-100px) translateX(40px); }
 
-#main-content .row {
+#main-content-container .row {
   margin: 0;
   top: -1px;
   position: relative;
   background: #e9d4ab;
   height: 400px; }
-  #main-content .row .divider {
-    z-index: 1111;
+  #main-content-container .row .divider {
     margin-left: 21px;
     height: 96px;
     top: -36px;
-    position: relative;
+    position: absolute;
     background-image: url(./../../../../ashes/assets/dist/images/divider.png);
     background-position: center -2px;
     width: calc(100% - 21px - 75px); }
-    #main-content .row .divider:before {
+    #main-content-container .row .divider:before {
       content: "";
       top: 0;
       height: 100%;
@@ -1767,7 +1788,7 @@ header nav {
       left: -21px;
       width: 60px;
       background-position: left -106px; }
-    #main-content .row .divider:after {
+    #main-content-container .row .divider:after {
       content: "";
       height: 100%;
       position: absolute;
@@ -1775,14 +1796,19 @@ header nav {
       right: -75px;
       width: 113px;
       background-position: right -106px; }
-    #main-content .row .divider.bot {
+    #main-content-container .row .divider.bot {
+      z-index: 1110;
       transform: rotate(180deg);
       top: 78%;
       position: absolute;
       width: calc(100% - 21px);
       margin-left: 0px; }
+  #main-content-container .row .main-content {
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 1px solid black; }
 
-#main-content .row:nth-child(2n+0) {
+#main-content-container .row:nth-child(2n+0) {
   background: #383739; }
 
 footer {
